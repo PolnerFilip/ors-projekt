@@ -22,17 +22,28 @@ function funkcija() {
             document.getElementById("datum").innerHTML = izpis;
 
             var testidanes = json.tests.performed.today;
-            console.log(testidanes);
             var pozitivnidanes = json.cases.confirmedToday;
             var hospitaliziranidanes = json.statePerTreatment.inHospital;
             var umrlidanes = json.statePerTreatment.deceased;
             var cepljenidanes = json.vaccination.administered.today;
+
+            var testiskupni = json.tests.performed.toDate;
+            var pozitivniskupni = json.cases.confirmedToDate;
+            var hospitaliziraniskupni = json.statePerTreatment.inHospitalToDate;
+            var umrliskupni = json.statePerTreatment.deceasedToDate;
+            var cepljeniskupni = json.vaccination.administered.toDate;
 
             document.getElementById("testiranjadanes").innerHTML = testidanes;
             document.getElementById("pozitivnidanes").innerHTML = pozitivnidanes;
             document.getElementById("hospitaliziranidanes").innerHTML = hospitaliziranidanes;
             document.getElementById("umrlidanes").innerHTML = umrlidanes;
             document.getElementById("cepljenidanes").innerHTML = cepljenidanes;
+
+            document.getElementById("testiranjaskupni").innerHTML = testiskupni;
+            document.getElementById("pozitivniskupni").innerHTML = pozitivniskupni;
+            document.getElementById("hospitaliziraniskupni").innerHTML = hospitaliziraniskupni;
+            document.getElementById("umrliskupni").innerHTML = umrliskupni;
+            document.getElementById("cepljeniskupni").innerHTML = cepljeniskupni;
         }
     });
 }
