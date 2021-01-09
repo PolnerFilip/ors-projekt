@@ -58,6 +58,7 @@ function graf (data, preverjanje) {
     //console.log("graf" + data);
 
     var shramba = [];
+    var shramba2 = [];
     var dnevi = [];
     var meseci = [];
     var indeks = 0;
@@ -71,15 +72,22 @@ function graf (data, preverjanje) {
 
         indeks++;
     }
+    indeks = 0;
+    for (let i = data.length - preverjanje; i > data.length - preverjanje - 7; i--) {
+        console.log(data[i]);
+
+        shramba2[indeks] = data[i].statePerTreatment.deceased;
+        dnevi[indeks] = data[i].day;
+        meseci[indeks] = data[i].month - 1;
+
+        indeks++;
+    }
 
     console.log(shramba);
 
     var chart = new CanvasJS.Chart("graf1", {
         animationEnabled: true,
         theme: "light1",
-        title:{
-            text: "Simple Line Chart"
-        },
         data: [{
             type: "line",
             indexLabelFontSize: 16,
@@ -96,6 +104,25 @@ function graf (data, preverjanje) {
         }]
     });
     chart.render();
+    var chart2 = new CanvasJS.Chart("graf2", {
+        animationEnabled: true,
+        theme: "light1",
+        data: [{
+            type: "line",
+            indexLabelFontSize: 16,
+            dataPoints: [
+                { x: new Date(2021, meseci[6], dnevi[6]), y: shramba2[6] },
+                { x: new Date(2021, meseci[5], dnevi[5]), y: shramba2[5] },
+                { x: new Date(2021, meseci[4], dnevi[4]), y: shramba2[4] },
+                { x: new Date(2021, meseci[3], dnevi[3]), y: shramba2[3] },
+                { x: new Date(2021, meseci[2], dnevi[2]), y: shramba2[2] },
+                { x: new Date(2021, meseci[1], dnevi[1]), y: shramba2[1] },
+                { x: new Date(2021, meseci[0], dnevi[0]), y: shramba2[0] },
+
+            ]
+        }]
+    });
+    chart2.render();
 
 }
 
