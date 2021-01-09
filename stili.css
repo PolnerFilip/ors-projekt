@@ -26,3 +26,23 @@
     background-color: red;
     text-align: center;
 }
+
+.parentgraf {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    background-color: aqua;
+    width: 70%;
+    height: 500px;
+    margin-left: 15%;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+
+.graf {
+    background-color: black;
+    color: white;
+}
