@@ -154,17 +154,28 @@ function regije (data) {
     document.getElementById("datumregije").innerHTML = izpis;
 
     var pomurska = dan.ms - endanprej.ms;
+    var podravska = dan.mb - endanprej.mb;
+    var koroska = dan.sg - endanprej.sg;
+    var savinjska = dan.ce - endanprej.ce;
+    var zasavska = dan.za - endanprej.za;
+    var posavska = dan.kk - endanprej.kk;
+    var jugovzhodna = dan.nm - endanprej.nm;
+    var osrednjeslo = dan.lj - endanprej.lj;
+    var gorenjska = dan.kr - endanprej.kr;
+    var primorska = dan.po - endanprej.po;
+    var goriska = dan.ng - endanprej.ng;
+    var obalna = dan.kp - endanprej.kp;
 
     document.getElementById("pomurska").innerHTML = pomurska;
-    document.getElementById("podravska").innerHTML = "jaj";
-    document.getElementById("koroska").innerHTML = "jaj";
-    document.getElementById("savinjska").innerHTML = "jaj";
-    document.getElementById("zasavska").innerHTML = "jaj";
-    document.getElementById("posavska").innerHTML = "jaj";
-    document.getElementById("jugovzhodna").innerHTML = "jaj";
-    document.getElementById("osrednjeslo").innerHTML = "jaj";
-    document.getElementById("gorenjska").innerHTML = "jaj";
-    document.getElementById("primorska").innerHTML = "jaj";
-    document.getElementById("goriska").innerHTML = "jaj";
-    document.getElementById("obalna").innerHTML = "jaj";
+    document.getElementById("podravska").innerHTML = podravska;
+    document.getElementById("koroska").innerHTML = koroska;
+    document.getElementById("savinjska").innerHTML = savinjska;
+    document.getElementById("zasavska").innerHTML = zasavska;
+    document.getElementById("posavska").innerHTML = posavska;
+    document.getElementById("jugovzhodna").innerHTML = jugovzhodna;
+    document.getElementById("osrednjeslo").innerHTML = osrednjeslo;
+    document.getElementById("gorenjska").innerHTML = gorenjska;
+    document.getElementById("primorska").innerHTML = primorska;
+    document.getElementById("goriska").innerHTML = goriska;
+    document.getElementById("obalna").innerHTML = obalna;
 }
