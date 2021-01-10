@@ -1,4 +1,3 @@
-
 function funkcija() {
     //console.log("halo");
     $.ajax({
@@ -6,15 +5,16 @@ function funkcija() {
         type: 'GET',
         dataType: 'json',
         success: function(data) {
-            console.log(data.length);
             var json;
             var preverjanje;
-            if (data[data.length - 1].hasOwnProperty('performed.today')) {
+            if (data[data.length - 1].hasOwnProperty('tests.performed.today')) {
                 json = data[data.length - 1];
                 preverjanje = 1;
+                console.log("1");
             } else {
                 json = data[data.length - 2];
                 preverjanje = 2;
+                console.log(data.length - 2);
             }
 
             console.log(json);
@@ -50,6 +50,7 @@ function funkcija() {
             document.getElementById("cepljeniskupni").innerHTML = cepljeniskupni;
 
             graf(data, preverjanje);
+            regije(data);
         }
     });
 }
@@ -58,6 +59,7 @@ function graf (data, preverjanje) {
     //console.log("graf" + data);
 
     var shramba = [];
+    var shramba2 = [];
     var dnevi = [];
     var meseci = [];
     var indeks = 0;
@@ -71,15 +73,22 @@ function graf (data, preverjanje) {
 
         indeks++;
     }
+    indeks = 0;
+    for (let i = data.length - preverjanje; i > data.length - preverjanje - 7; i--) {
+        console.log(data[i]);
+
+        shramba2[indeks] = data[i].statePerTreatment.deceased;
+        dnevi[indeks] = data[i].day;
+        meseci[indeks] = data[i].month - 1;
+
+        indeks++;
+    }
 
     console.log(shramba);
 
     var chart = new CanvasJS.Chart("graf1", {
         animationEnabled: true,
         theme: "light1",
-        title:{
-            text: "Simple Line Chart"
-        },
         data: [{
             type: "line",
             indexLabelFontSize: 16,
@@ -96,6 +105,66 @@ function graf (data, preverjanje) {
         }]
     });
     chart.render();
+    var chart2 = new CanvasJS.Chart("graf2", {
+        animationEnabled: true,
+        theme: "light1",
+        data: [{
+            type: "line",
+            indexLabelFontSize: 16,
+            dataPoints: [
+                { x: new Date(2021, meseci[6], dnevi[6]), y: shramba2[6] },
+                { x: new Date(2021, meseci[5], dnevi[5]), y: shramba2[5] },
+                { x: new Date(2021, meseci[4], dnevi[4]), y: shramba2[4] },
+                { x: new Date(2021, meseci[3], dnevi[3]), y: shramba2[3] },
+                { x: new Date(2021, meseci[2], dnevi[2]), y: shramba2[2] },
+                { x: new Date(2021, meseci[1], dnevi[1]), y: shramba2[1] },
+                { x: new Date(2021, meseci[0], dnevi[0]), y: shramba2[0] },
 
+            ]
+        }]
+    });
+    chart2.render();
 }
 
+function regije (data) {
+
+    var dan = [];
+    var endanprej = [];
+
+    var day;
+    var month;
+    var year;
+
+    for (let i = data.length - 1; i > 0; i--) {
+        if (data[i].statePerRegion.kr != null && data[i].statePerRegion.kk != null && data[i].statePerRegion.ms != null) {
+            day = data[i].day;
+            month = data[i].month;
+            year = data[i].year;
+
+            dan = data[i].statePerRegion;
+            endanprej = data[i-1].statePerRegion;
+            break;
+        }
+    }
+
+    //console.log(dan);
+    //console.log(endanprej);
+
+    var izpis = 'Podatki za: ' + day + '.' + month + '.' + year;
+    document.getElementById("datumregije").innerHTML = izpis;
+
+    var pomurska = dan.ms - endanprej.ms;
+
+    document.getElementById("pomurska").innerHTML = pomurska;
+    document.getElementById("podravska").innerHTML = "jaj";
+    document.getElementById("koroska").innerHTML = "jaj";
+    document.getElementById("savinjska").innerHTML = "jaj";
+    document.getElementById("zasavska").innerHTML = "jaj";
+    document.getElementById("posavska").innerHTML = "jaj";
+    document.getElementById("jugovzhodna").innerHTML = "jaj";
+    document.getElementById("osrednjeslo").innerHTML = "jaj";
+    document.getElementById("gorenjska").innerHTML = "jaj";
+    document.getElementById("primorska").innerHTML = "jaj";
+    document.getElementById("goriska").innerHTML = "jaj";
+    document.getElementById("obalna").innerHTML = "jaj";
+}
