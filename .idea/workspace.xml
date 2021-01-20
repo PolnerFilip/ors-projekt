@@ -24,9 +24,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Slike" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Uporabnik\Documents\GitHub\ors-projekt\Slike" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -37,7 +42,13 @@
       <option name="presentableId" value="Default" />
       <updated>1610212036954</updated>
       <workItem from="1610212038375" duration="2917000" />
-      <workItem from="1610272718159" duration="2530000" />
+      <workItem from="1610272718159" duration="4383000" />
+      <workItem from="1610626374547" duration="35000" />
+      <workItem from="1610698957824" duration="2846000" />
+      <workItem from="1610809840064" duration="1568000" />
+      <workItem from="1611070873264" duration="3668000" />
+      <workItem from="1611159809522" duration="562000" />
+      <workItem from="1611164931568" duration="5613000" />
     </task>
     <servers />
   </component>

@@ -22,8 +22,8 @@ function funkcija() {
             var mesec = json.month;
             var leto = json.year;
 
-            var izpis = 'Podatki za: ' + dan + '.' + mesec + '.' + leto;
-            document.getElementById("datum").innerHTML = izpis;
+            var izpis = dan + '.' + mesec + '.' + leto;
+            document.getElementById("datum").innerHTML = 'Podatki za: ' + "<b>" + izpis + "</b>";
 
             var testidanes = json.tests.performed.today;
             var pozitivnidanes = json.cases.confirmedToday;
@@ -87,11 +87,29 @@ function graf (data, preverjanje) {
     console.log(shramba);
 
     var chart = new CanvasJS.Chart("graf1", {
+        backgroundColor: null,
         animationEnabled: true,
         theme: "light1",
+        axisX:{
+            valueFormatString: "D.M.YYYY" ,
+            labelAngle: -50,
+            labelFontSize: 13,
+            labelFontColor: "white",
+            labelFontFamily: "Century Gothic",
+        },
+        axisY:{
+            labelFontColor: "white",
+            labelFontFamily: "Century Gothic",
+            gridThickness: 3,
+        },
         data: [{
             type: "line",
+            lineColor: "rgb(211, 60, 0)",
+            markerColor: "rgb(211, 60, 0)",
+            lineThickness: 6,
+            markerSize: 15,
             indexLabelFontSize: 16,
+            indexLabelOririentation: "horizontal",
             dataPoints: [
                 { x: new Date(2021, meseci[6], dnevi[6]), y: shramba[6] },
                 { x: new Date(2021, meseci[5], dnevi[5]), y: shramba[5] },
@@ -107,10 +125,27 @@ function graf (data, preverjanje) {
     chart.render();
     var chart2 = new CanvasJS.Chart("graf2", {
         animationEnabled: true,
+        backgroundColor: null,
         theme: "light1",
+        axisX:{
+            valueFormatString: "D.M.YYYY" ,
+            labelAngle: -50,
+            labelFontSize: 13,
+            labelFontColor: "white",
+            labelFontFamily: "Century Gothic",
+        },
+        axisY:{
+            labelFontColor: "white",
+            labelFontFamily: "Century Gothic",
+            gridThickness: 3,
+        },
         data: [{
             type: "line",
+            lineColor: "rgb(211, 60, 0)",
+            markerColor: "rgb(211, 60, 0)",
             indexLabelFontSize: 16,
+            lineThickness: 6,
+            markerSize: 15,
             dataPoints: [
                 { x: new Date(2021, meseci[6], dnevi[6]), y: shramba2[6] },
                 { x: new Date(2021, meseci[5], dnevi[5]), y: shramba2[5] },
@@ -150,8 +185,8 @@ function regije (data) {
     //console.log(dan);
     //console.log(endanprej);
 
-    var izpis = 'Podatki za: ' + day + '.' + month + '.' + year;
-    document.getElementById("datumregije").innerHTML = izpis;
+    var izpis = day + '.' + month + '.' + year;
+    document.getElementById("datumregije").innerHTML = 'Podatki za: ' + "<b>" + izpis + "</b>";
 
     var pomurska = dan.ms - endanprej.ms;
     var podravska = dan.mb - endanprej.mb;

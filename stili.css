@@ -6,7 +6,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #c9bfbf; font-size: medium; font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f5f5f5;
+    font-size: medium; font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -34,12 +35,18 @@ h1 {
 .podatek {
     background-color: rgba(26, 22, 22, 0.856);
     color: white;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 3px 3px 0px 1px rgba(0,0,0,0.14);
 }
 
 .naslov {
     height: 30%;
     background-color: rgb(211, 60, 0);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .parentgraf {
@@ -61,13 +68,15 @@ h1 {
     color: white;
 }
 
+#graf1, #graf2 {
+    box-shadow: 3px 3px 0px 1px rgba(0,0,0,0.14);
+}
 .parentregije {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 15px;
-    background-color: rgb(255, 255, 255);
     height: 200px;
     width: 70%;
     margin-left: 15%;
@@ -76,9 +85,10 @@ h1 {
 
 .regija {
     background-color: rgba(26, 22, 22, 0.856);
+    box-shadow: 3px 3px 0px 1px rgba(0,0,0,0.14);
 }
 .main_Header{
-    background-image: url(Slike/132.jpg);
+    /*background-image: url(Slike/132.jpg);*/
     background-size: cover;
     background-blend-mode: multiply;
     background-color: rgba(0,0,0,10%);
@@ -89,8 +99,11 @@ h1 {
     background-color: rgb(255, 255, 255);
     color: rgb(5, 5, 5);
 }
-#datum {
+p {
+    margin: 0;
     margin-left: 15%;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
     background-color: aqua;
     width: 70%;
@@ -112,13 +125,68 @@ h1 {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 15px;
-    background-color: aqua;
     height: 200px;
     width: 70%;
     margin-left: 15%;
     color: white;
+    text-align: center;
 }
 
 .regija {
-    background-color: black;
+    background-color: rgba(26, 22, 22, 0.856);
+}
+
+.stevilka {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+html *
+{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+}
+
+.region {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+#graf1, #graf2 {
+    background-color: rgba(26, 22, 22, 0.856);
+}
+
+#header {
+    width: 100%;
+    height: 3em;
+    background-color: rgb(211, 60, 0);
+}
+
+.grafnaslov {
+    width: 34.59%;
+    height: 30px;
+    background-color: rgb(211, 60, 0);
+    margin-left: 15%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 3px 1px 0px 1px rgba(0,0,0,0.14);
+}
+
+#nasloov {
+    margin: 10px;
+    font-size: 30px;
+    margin-left: 15%;
+}
+
+footer {
+    background-color: rgb(211, 60, 0);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-indent: 1em;
+    color: white;
 }
