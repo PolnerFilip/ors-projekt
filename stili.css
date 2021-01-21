@@ -145,6 +145,7 @@ p {
 html *
 {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
 }
 
 .region {
