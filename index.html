@@ -9,123 +9,122 @@
 </head>
 
 <body onload="funkcija()" >
-    <header class="main_Header">  <div class="Header1">
-        <h1>Covid statistika Slovenije</h1>
-      </div></header>
-      <br><br>
+<div id="header">
+    <img src="./Slike/image%20(1).png" height="100%">
+</div>
+<br>
+<h1 id="nasloov">SPLOŠNI PODATKI</h1>
 <p id="datum"></p>
 <span class="parent">
     <div class="podatek">
         <div class="naslov">Testiranja</div>
-        <div id="testiranjadanes"></div>
+        <div id="testiranjadanes" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Pozitivni testi</div>
-        <div id="pozitivnidanes"></div>
+        <div id="pozitivnidanes" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Hospitalizirani</div>
-        <div id="hospitaliziranidanes"></div>
+        <div id="hospitaliziranidanes" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Umrli</div>
-        <div id="umrlidanes"></div>
+        <div id="umrlidanes" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Cepljeni</div>
-        <div id="cepljenidanes"></div>
+        <div id="cepljenidanes" class="stevilka"></div>
     </div>
 </span>
-<br><br>
+<br>
 <p>Skupni podatki</p>
 <span class="parent">
     <div class="podatek">
         <div class="naslov">Testiranja</div>
-        <div id="testiranjaskupni"></div>
+        <div id="testiranjaskupni" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Pozitivni testi</div>
-        <div id="pozitivniskupni"></div>
+        <div id="pozitivniskupni" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Hospitalizirani</div>
-        <div id="hospitaliziraniskupni"></div>
+        <div id="hospitaliziraniskupni" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Umrli</div>
-        <div id="umrliskupni"></div>
+        <div id="umrliskupni" class="stevilka"></div>
     </div>
     <div class="podatek">
         <div class="naslov">Cepljeni</div>
-        <div id="cepljeniskupni"></div>
+        <div id="cepljeniskupni" class="stevilka"></div>
     </div>
 </span>
-<br><br>
-
+<br>
+<p>Zadnji teden</p>
+<div class="grafnaslov">Pozitivni primeri</div>
+<div class="grafnaslov" style="margin-left: 0.57%; width: 34.63%;">Umrli</div>
 <span class="parentgraf">
     <div id="graf1"></div>
     <div id="graf2"></div>
 </span>
 <br><br>
+<h1 id="nasloov">PODATKI PO REGIJAH</h1>
 <p id="datumregije"></p>
 <span class="parentregije">
     <div class="regija">
         <div class="naslov">Pomurska</div>
-        <div id="pomurska"></div>
+        <div id="pomurska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Podravska</div>
-        <div id="podravska"></div>
+        <div id="podravska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Koroška</div>
-        <div id="koroska"></div>
+        <div id="koroska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Savinjska</div>
-        <div id="savinjska"></div>
+        <div id="savinjska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Zasavska</div>
-        <div id="zasavska"></div>
+        <div id="zasavska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Posavska</div>
-        <div id="posavska"></div>
+        <div id="posavska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Jugovzhodna Slovenija</div>
-        <div id="jugovzhodna"></div>
+        <div id="jugovzhodna" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Osrednjeslovenska</div>
-        <div id="osrednjeslo"></div>
+        <div id="osrednjeslo" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Gorenjska</div>
-        <div id="gorenjska"></div>
+        <div id="gorenjska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Primorsko-notranjska</div>
-        <div id="primorska"></div>
+        <div id="primorska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Goriška</div>
-        <div id="goriska"></div>
+        <div id="goriska" class="region"></div>
     </div>
     <div class="regija">
         <div class="naslov">Obalno-Kraška</div>
-        <div id="obalna"></div>
+        <div id="obalna" class="region"></div>
     </div>
 </span>
-
-</body>
+<br><br>
 <footer>
-    <p>Avtorji: Filip Polner, Benjamin Štimec, Izak Užmah<br>
-        Kontakt:<br>
-    <a href="mailto:filip.polner@student.um.si">filip.polner@student.um.si</a><br>
-    <a href="mailto:benjamin.stimec@student.um.si">benjamin.stimec@student.um.si</a><br>
-    <a href="mailto:izak.uzmah@student.um.si">izak.uzmah@student.um.si</a></p>
-  </footer>
-
+    Avtorji: Filip Polner, Benjamin Štimec, Izak Užmah
+</footer>
+</body>
 </html>
